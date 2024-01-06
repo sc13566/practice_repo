@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{/* {{ partial "libsass" "scss/roadmap/roadmap01.scss" }} */}} {{ $css :=
+    resources.Get "/scss/roadmap/roadmap04.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="text-container">
+        <p class="header-text">UIDesignDaily</p>
+        <p class="large-text">404</p>
+        <p class="normal-text">
+          The link you clicked may be broken or the page may have been removed.
+        </p>
+        <p class="footer-text">
+          Visit the <a href="#">home page</a> or <a href="#">contact</a> me.
+        </p>
+      </div>
+    </main>
+
+    {{/* {{ $js := resources.Get "/javascript/roadmap/roadmap03.js" }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>
+    */}}
+  </body>
+</html>

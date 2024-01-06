@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{/* {{ partial "libsass" "scss/roadmap/roadmap01.scss" }} */}} {{ $css :=
+    resources.Get "/scss/roadmap/roadmap03.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="modal">
+        <p class="text-bdays">24 birthdays today</p>
+        <ul class="users">
+          <li class="user__item">
+            <div class="user__icon">
+              <img src="https://images.pexels.com/photos/6408360/pexels-photo-6408360.jpeg" alt="" />
+            </div>
+            <div class="user__info">
+              <p class="user__name">Bertie Yates</p>
+              <p class="user__age">29 years</p>
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__icon">
+              <img src="https://images.pexels.com/photos/5255596/pexels-photo-5255596.jpeg" alt="" />
+            </div>
+            <div class="user__info">
+              <p class="user__name">Hester Hogan</p>
+              <p class="user__age">32 years</p>
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__icon">
+              <img src="https://images.pexels.com/photos/7240112/pexels-photo-7240112.jpeg" alt="" />
+            </div>
+            <div class="user__info">
+              <p class="user__name">Larry Little</p>
+              <p class="user__age">36 years</p>
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__icon">
+              <img src="https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg" style="object-position: bottom" alt="" />
+            </div>
+            <div class="user__info">
+              <p class="user__name">Sean Walsh</p>
+              <p class="user__age">34 years</p>
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__icon">
+              <img src="https://images.pexels.com/photos/4556737/pexels-photo-4556737.jpeg" alt="" />
+            </div>
+            <div class="user__info">
+              <p class="user__name">Lala Gardner</p>
+              <p class="user__age">29 years</p>
+            </div>
+          </li>
+        </ul>
+        <button class="button">View All</button>
+      </div>
+    </main>
+
+    {{/*  {{ $js := resources.Get "/javascript/roadmap/roadmap03.js" }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>  */}}
+  </body>
+</html>

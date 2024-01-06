@@ -1,0 +1,162 @@
+:root {
+  --color-black1: #1e1a50;
+  --color-black2: #1a2950;
+  --color-dblue: #242e4c;
+  --color-blue: #738bfd;
+  --color-orange: #f55623;
+  --color-gray1: #767e96;
+  --color-gray2: #e9eaed;
+  --color-gray3: #f3f4f6;
+
+  --font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+/* button reset */
+
+button {
+  cursor: pointer;
+
+  border-style: none;
+  background: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 4rem 0;
+
+  background-color: gray;
+}
+
+.modal {
+  width: 80%;
+  max-width: 50rem;
+
+  margin: auto;
+
+  padding: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: white;
+
+  border-radius: 1rem;
+
+  box-shadow: 1rem 1rem 1rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.header-text {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.input-grid {
+  margin-block-start: 3rem;
+
+  width: 100%;
+
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: 1fr auto;
+  grid-auto-flow: row;
+}
+
+.description-text {
+  margin-block-start: 2rem;
+  font-size: 16px;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.email-input {
+  padding: 1.5em;
+
+  width: 100%;
+
+  border-radius: 0.5em;
+  border: 2px solid gray;
+}
+
+.button {
+  font-size: 16px;
+  padding: 1.125em 4em;
+
+  display: inline-flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+
+  background-color: royalblue;
+  color: white;
+
+  text-transform: uppercase;
+
+  border-radius: 0.5em;
+
+  box-shadow: 0 0.5em 0.5em -0.25em rgba(0, 0, 0, 0.2);
+  transition: 200ms;
+}
+
+@media (max-width: 50rem) {
+  .modal {
+    padding: clamp(2rem, 9vw, 5rem);
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    padding: 1.125em 0;
+  }
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button svg {
+  aspect-ratio: 1;
+  width: 1.5em;
+}
+
+.checkbox-container {
+  align-self: start;
+
+  text-align: start;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.agree-checkbox {
+  aspect-ratio: 1;
+  width: 1.25rem;
+
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.checkbox-label {
+  font-size: 14px;
+}

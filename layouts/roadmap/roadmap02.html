@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{/* {{ partial "libsass" "scss/roadmap/roadmap01.scss" }} */}} {{ $css :=
+    resources.Get "/scss/roadmap/roadmap02.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <dialog class="modal" id="modalDialog">
+        <button class="btn-exit" id="btn-exit">
+          <svg>
+            <use xlink:href="/images/roadmap/roadmap02.svg/#close-x"></use>
+          </svg>
+        </button>
+
+        <div class="modal__content-wrapper">
+          <div class="tree-image">
+            <svg>
+              <use
+                xlink:href="/images/roadmap/roadmap02.svg/#tree-decorated"
+              ></use>
+            </svg>
+          </div>
+          <h1 class="modal-text text-header">Merry Christmas!</h1>
+          <p class="modal-text text-reg">
+            You completed all your December's tasks so we decided yo get you a
+            gift:
+          </p>
+          <p class="modal-text text-accent">
+            50% off on your Yearly Premium Plan
+          </p>
+          <button class="btn-std" id="btn-claim-gift">
+            <span class="loader" data-show="hide"></span>
+            <span id="txt-btn-claim"> Get Your Gift </span>
+          </button>
+        </div>
+      </dialog>
+
+      <section class="non-modal-area container">
+        <button class="btn-std" id="btn-show-modal">Show Modal</button>
+      </section>
+    </main>
+
+    {{ $js := resources.Get "/javascript/roadmap/roadmap02.js" }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>
+  </body>
+</html>

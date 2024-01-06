@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 06</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    {{ $css := resources.Get "/scss/conquering/conquering03.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  </head>
+  <body>
+    <main>
+      <section class="hero bg-primary-900">
+        <div class="section-container section-hero">
+          <div class="hero__text">
+            <h1 class="header">Responsive layouts don't have to be a struggle</h1>
+            <h2 class="subheader">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+              minim veniam.
+            </h2>
+            <button class="button">I WANT TO LEARN</button>
+          </div>
+          <div class="hero__image">
+            <img src="images/conquering/color-design.jpg" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="section-container section-3col">
+          <div class="text-col">
+            <h2 class="accent-text">Cheap</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam.
+            </p>
+          </div>
+          <div class="text-col">
+            <h2 class="accent-text">Quick</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam.
+            </p>
+          </div>
+          <div class="text-col">
+            <h2 class="accent-text">Quality</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="bg-primary-900">
+        <div class="section-container section-2col">
+          <div class="text-col">
+            <h2>Cheap</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam.
+            </p>
+          </div>
+          <div class="text-col">
+            <h2>Quick</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

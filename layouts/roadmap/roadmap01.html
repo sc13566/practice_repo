@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{/* {{ partial "libsass" "scss/roadmap/roadmap01.scss" }} */}} {{ $css :=
+    resources.Get "/scss/roadmap/roadmap01.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="wrapper even-columns">
+        <div class="main-column">
+          <section class="buttons-section">
+            <h2 class="section-header">BUTTONS</h2>
+            <div class="section-wrapper buttons">
+              <div class="buttons-default">
+                <p class="button-desc italic-14">Default</p>
+                <button class="button-primary">Primary Button</button>
+                <button class="button-secondary">Secondary Button</button>
+              </div>
+              <div class="buttons-hovered">
+                <p class="button-desc italic-14">Hovered</p>
+                <button class="button-primary">Primary Button</button>
+                <button class="button-secondary">Secondary Button</button>
+              </div>
+            </div>
+          </section>
+          <section class="inputs-section">
+            <h2 class="section-header">INPUTS</h2>
+            <div class="section-wrapper inputs">
+              <h3 class="input-label">Full Name</h3>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="full-name-input"
+                  class="form-input"
+                  placeholder="ex. Lida Owen"
+                />
+                <p class="input-info italic-14">Default</p>
+              </div>
+              <p class="input-error">
+                Your password must be at least <strong>6 characters</strong> long.
+              </p>
+              <h3 class="input-label">Your Name</h3>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="your-name-input"
+                  class="form-input"
+                  placeholder="ex. Lida Owen"
+                />
+                <p class="input-info italic-14">Filled</p>
+              </div>
+              <p class="input-error">
+                Your password must be at least <strong>6 characters</strong> long.
+              </p>
+              <h3 class="input-label">Password</h3>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="password-input"
+                  class="form-input"
+                  placeholder="5+ characters"
+                />
+                <p class="input-info italic-14">Focused with error message</p>
+              </div>
+              <p class="input-error" data-show="show">
+                Your password must be at least <strong>6 characters</strong> long.
+              </p>
+              <h3 class="input-label">Email Address</h3>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="email-address-input"
+                  class="form-input"
+                  placeholder="myemail@address.com"
+                />
+                <p class="input-info italic-14">Inactive</p>
+              </div>
+              <p class="input-error">
+                Your password must be at least <strong>6 characters</strong> long.
+              </p>
+            </div>
+          </section>
+          <section class="cards-section">
+            <h2 class="section-header">CARDS</h2>
+            <div class="section-wrapper cards">
+              <div class="card-wrapper">
+                <p class="card-desc italic-14">Default Card Background</p>
+                <div class="card"></div>
+              </div>
+              <div class="card-wrapper">
+                <p class="card-desc italic-14">Hovered Card Background</p>
+                <div class="card card-hover"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="main-column">
+          <section class="colors-section">
+            <h2 class="section-header">COLORS</h2>
+            <div class="section-wrapper colors">
+              <div
+                class="color-box"
+                style="
+                  --cbox-text-color: #fff;
+                  --cbox-bg-color: var(--color-dblue);
+                "
+              >
+                #242E4C
+              </div>
+              <div
+                class="color-box"
+                style="
+                  --cbox-text-color: #fff;
+                  --cbox-bg-color: var(--color-blue);
+                "
+              >
+                #738BFD
+              </div>
+              <div
+                class="color-box"
+                style="
+                  --cbox-text-color: #fff;
+                  --cbox-bg-color: var(--color-orange);
+                "
+              >
+                #F55623
+              </div>
+              <div
+                class="color-box"
+                style="
+                  --cbox-text-color: #fff;
+                  --cbox-bg-color: var(--color-gray1);
+                "
+              >
+                #767E96
+              </div>
+              <div
+                class="color-box"
+                style="
+                  --cbox-text-color: #000;
+                  --cbox-bg-color: var(--color-gray2);
+                "
+              >
+                #E9EAED
+              </div>
+              <div
+                class="color-box"
+                style="
+                  --cbox-text-color: #000;
+                  --cbox-bg-color: var(--color-gray3);
+                "
+              >
+                #F3F4F6
+              </div>
+            </div>
+          </section>
+          <section class="fonts-section">
+            <h2 class="section-header">FONTS - Montserrat</h2>
+            <div class="section-wrapper fonts">
+              <p class="font-showcase">Page Title | 28px Bold #1E1A50</p>
+              <p class="font-showcase">Secondary Title | 16px Bold #1E1A50</p>
+              <p class="font-showcase">Tertiary Title | 14px Bold #1A2950</p>
+              <p class="font-showcase">Link | Montserrat 14px Medium #738BFD</p>
+              <p class="font-showcase">Input Placeholder | 14px Medium #767E96</p>
+              <p class="font-showcase">Basic Paragraph | 12px #1A2950</p>
+              <p class="font-showcase">
+                Board Summary Label | 12px Medium #767696
+              </p>
+              <p class="font-showcase">Alert Message | 12px Medium #F55623</p>
+            </div>
+          </section>
+          <section class="icons-section">
+            <h2 class="section-header">ICONS</h2>
+            <div class="section-wrapper icons">
+              <div class="icon">
+                <svg
+                  fill="#1c2746"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 24 24"
+                  xml:space="preserve"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <style type="text/css">
+                      .st0 {
+                        fill: none;
+                      }
+                    </style>
+                    <path
+                      d="M3.7,7.8L2.3,9.2l9,9l0.7,0.7l0.7-0.7l9-9l-1.4-1.4L12,16.1L3.7,7.8z"
+                    ></path>
+                    <rect class="st0" width="24" height="24"></rect>
+                    <rect class="st0" width="24" height="24"></rect>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  fill="#1c2746"
+                  viewBox="0 0 32 32"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>calendar</title>
+                    <path
+                      d="M0 26.016q0 2.496 1.76 4.224t4.256 1.76h20q2.464 0 4.224-1.76t1.76-4.224v-20q0-1.952-1.12-3.488t-2.88-2.144v2.624q0 1.248-0.864 2.144t-2.144 0.864-2.112-0.864-0.864-2.144v-3.008h-12v3.008q0 1.248-0.896 2.144t-2.112 0.864-2.144-0.864-0.864-2.144v-2.624q-1.76 0.64-2.88 2.144t-1.12 3.488v20zM4 26.016v-16h24v16q0 0.832-0.576 1.408t-1.408 0.576h-20q-0.832 0-1.44-0.576t-0.576-1.408zM6.016 3.008q0 0.416 0.288 0.704t0.704 0.288 0.704-0.288 0.288-0.704v-3.008h-1.984v3.008zM8 24h4v-4h-4v4zM8 18.016h4v-4h-4v4zM14.016 24h4v-4h-4v4zM14.016 18.016h4v-4h-4v4zM20 24h4v-4h-4v4zM20 18.016h4v-4h-4v4zM24 3.008q0 0.416 0.288 0.704t0.704 0.288 0.704-0.288 0.32-0.704v-3.008h-2.016v3.008z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#1c2746"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <title>ic_fluent_erase_24_filled</title>
+                    <desc>Created with Sketch.</desc>
+                    <g
+                      id="🔍-Product-Icons"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="ic_fluent_erase_24_filled"
+                        fill="#1c2746"
+                        fill-rule="nonzero"
+                      >
+                        <path
+                          d="M15.8698693,2.66881311 L20.838395,7.63733874 C21.7170746,8.5160184 21.7170746,9.9406396 20.838395,10.8193193 L12.1565953,19.4998034 L18.25448,19.5 C18.6341758,19.5 18.947971,19.7821539 18.9976334,20.1482294 L19.00448,20.25 C19.00448,20.6296958 18.7223262,20.943491 18.3562506,20.9931534 L18.25448,21 L9.84446231,21.0012505 C9.22825282,21.0348734 8.60085192,20.8163243 8.13013068,20.345603 L3.16160505,15.3770774 C2.28292539,14.4983977 2.28292539,13.0737765 3.16160505,12.1950969 L12.6878888,2.66881311 C13.5665685,1.79013346 14.9911897,1.79013346 15.8698693,2.66881311 Z M11.6976366,17.7582967 L5.7429273,11.8035875 L4.23660183,13.2700937 C3.94370861,13.5629869 3.94370861,14.0378606 4.23660183,14.3307538 L9.1823612,19.2763813 C9.47983601,19.5646202 9.95465072,19.5571329 10.2428895,19.2596581 L11.6976366,17.7582967 Z"
+                          id="🎨-Color"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+                      stroke="#1c2746"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
+                      stroke="#1c2746"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
+                      stroke="#1c2746"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#1c2746"
+                  stroke-width="0.288"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M11.4001 18.1612L11.4001 18.1612L18.796 10.7653C17.7894 10.3464 16.5972 9.6582 15.4697 8.53068C14.342 7.40298 13.6537 6.21058 13.2348 5.2039L5.83882 12.5999L5.83879 12.5999C5.26166 13.1771 4.97307 13.4657 4.7249 13.7838C4.43213 14.1592 4.18114 14.5653 3.97634 14.995C3.80273 15.3593 3.67368 15.7465 3.41556 16.5208L2.05445 20.6042C1.92743 20.9852 2.0266 21.4053 2.31063 21.6894C2.59466 21.9734 3.01478 22.0726 3.39584 21.9456L7.47918 20.5844C8.25351 20.3263 8.6407 20.1973 9.00498 20.0237C9.43469 19.8189 9.84082 19.5679 10.2162 19.2751C10.5343 19.0269 10.823 18.7383 11.4001 18.1612Z"
+                      fill="#1c2746"
+                    ></path>
+                    <path
+                      d="M20.8482 8.71306C22.3839 7.17735 22.3839 4.68748 20.8482 3.15178C19.3125 1.61607 16.8226 1.61607 15.2869 3.15178L14.3999 4.03882C14.4121 4.0755 14.4246 4.11268 14.4377 4.15035C14.7628 5.0875 15.3763 6.31601 16.5303 7.47002C17.6843 8.62403 18.9128 9.23749 19.85 9.56262C19.8875 9.57563 19.9245 9.58817 19.961 9.60026L20.8482 8.71306Z"
+                      fill="#1c2746"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.0392 15.6244C18.2714 14.084 19.0082 12.1301 19.0082 10.0041C19.0082 5.03127 14.9769 1 10.0041 1C5.03127 1 1 5.03127 1 10.0041C1 14.9769 5.03127 19.0082 10.0041 19.0082C12.1301 19.0082 14.084 18.2714 15.6244 17.0392L21.2921 22.707C21.6828 23.0977 22.3163 23.0977 22.707 22.707C23.0977 22.3163 23.0977 21.6828 22.707 21.2921L17.0392 15.6244ZM10.0041 17.0173C6.1308 17.0173 2.99087 13.8774 2.99087 10.0041C2.99087 6.1308 6.1308 2.99087 10.0041 2.99087C13.8774 2.99087 17.0173 6.1308 17.0173 10.0041C17.0173 13.8774 13.8774 17.0173 10.0041 17.0173Z"
+                      fill="#1c2746"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  fill="#1c2746"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M2,4A1,1,0,0,1,3,3H21a1,1,0,0,1,0,2H3A1,1,0,0,1,2,4Zm1,9H21a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Zm0,8H21a1,1,0,0,0,0-2H3a1,1,0,0,0,0,2Z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  viewBox="0 0 76 76"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  baseProfile="full"
+                  enable-background="new 0 0 76.00 76.00"
+                  xml:space="preserve"
+                  fill="#000000"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill="#1c2746"
+                      fill-opacity="1"
+                      stroke-width="0.2"
+                      stroke-linejoin="round"
+                      d="M 19,19L 36,19L 36,36L 19,36L 19,19 Z M 19,40L 36,40L 36,57L 19,57L 19,40 Z M 40,57L 40,40L 57,40L 57,57L 40,57 Z M 40,36L 40,19L 57,19L 57,36L 40,36 Z "
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon">
+                <svg
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill="#1c2746"
+                      fill-rule="evenodd"
+                      d="M9 17a1 1 0 102 0v-6h6a1 1 0 100-2h-6V3a1 1 0 10-2 0v6H3a1 1 0 000 2h6v6z"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon blurred">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M19.7778 2H4.22222C3 2 2 3 2 4.22222V19.7778C2 21 3 22 4.22222 22H19.7778C21 22 22 21 22 19.7778V4.22222C22 3 21 2 19.7778 2ZM9 9C9 7.3425 10.3425 6 12 6C13.6575 6 15 7.3425 15 9C15 10.6575 13.6575 12 12 12C10.3425 12 9 10.6575 9 9ZM12 7.5C12.825 7.5 13.5 8.175 13.5 9C13.5 9.825 12.825 10.5 12 10.5C11.175 10.5 10.5 9.825 10.5 9C10.5 8.175 11.175 7.5 12 7.5ZM12 15C14.025 15 16.35 15.9675 16.5 16.5H7.5C7.6725 15.96 9.9825 15 12 15ZM12 13.5C9.9975 13.5 6 14.505 6 16.5V18H18V16.5C18 14.505 14.0025 13.5 12 13.5Z"
+                      fill="#1c2746"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+  
+              <div class="icon blurred">
+                <svg
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      stroke="#1c2746"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 19v-9a1 1 0 011-1h11a1 1 0 011 1v9a1 1 0 01-1 1H4a1 1 0 01-1-1zm0 0l4.293-4.293a1 1 0 011.414 0L14 20M7 6V5a1 1 0 011-1h12a1 1 0 011 1v10a1 1 0 01-1 1h-1m-7-4v.01"
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

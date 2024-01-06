@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{/* {{ partial "libsass" "scss/roadmap/roadmap01.scss" }} */}} {{ $css :=
+    resources.Get "/scss/roadmap/roadmap05.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <form class="modal">
+        <p class="header-text">Let's keep in touch</p>
+        <p class="description-text">
+          Subscribe to keep up with fresh news and exciting updates.<br />We
+          promise not to spam you!
+        </p>
+        <div class="input-grid">
+            <input
+              id="tbox-email"
+              type="text"
+              placeholder="Enter"
+              class="email-input"
+            />
+            <button id="btn-send" class="button">
+              Send
+              <svg>
+                <use xlink:href="/images/roadmap/roadmap05.svg/#right-arrow"></use>
+              </svg>
+            </button>
+          <div class="checkbox-container">
+            <input id="cbox-agree" type="checkbox" class="agree-checkbox" />
+            <label for="cbox-agree" class="checkbox-label">
+              I agree to my email address being stored and used to receive monthly
+              newsletters.
+            </label>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    {{/* {{ $js := resources.Get "/javascript/roadmap/roadmap03.js" }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>
+    */}}
+  </body>
+</html>

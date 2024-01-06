@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{/* {{ partial "libsass" "scss/roadmap/roadmap01.scss" }} */}} {{ $css :=
+    resources.Get "/scss/roadmap/roadmap06.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="modal">
+        <p class="header-text">Share this article</p>
+        <p class="description-text">
+          If you liked this article, share it with your friends!<br />
+          They will thank you later.
+        </p>
+        <div class="social">
+          <button id="btn-facebook" class="social__button" style="background-color: var(--color-facebook);">
+            <div class="social__logo">
+              <svg class="icon">
+                <use xlink:href="/images/roadmap/roadmap06.svg/#facebook"></use>
+              </svg>
+            </div>
+            Facebook
+          </button>
+          <button id="btn-twitter" class="social__button" style="background-color: var(--color-twitter);">
+            <div class="social__logo">
+              <svg class="icon">
+                <use xlink:href="/images/roadmap/roadmap06.svg/#twitter"></use>
+              </svg>
+            </div>
+            Twitter
+          </button>
+          <button id="btn-reddit" class="social__button" style="background-color: var(--color-reddit);">
+            <div class="social__logo">
+              <svg class="icon">
+                <use xlink:href="/images/roadmap/roadmap06.svg/#reddit"></use>
+              </svg>
+            </div>
+            Reddit
+          </button>
+        </div>
+      </div>
+    </main>
+
+    {{/* {{ $js := resources.Get "/javascript/roadmap/roadmap03.js" }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>
+    */}}
+  </body>
+</html>

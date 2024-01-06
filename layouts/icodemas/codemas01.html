@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{ $css := resources.Get "/scss/icodemas/codemas01.css" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  </head>
+
+  <body>
+    <main>
+      <div class="content-wrapper">
+        <h1 class="header">iCodeMas is coming to town</h1>
+        <h2 class="subheader">
+          Celebrate the Magic of the Season! Exclusive Christmas Challenges for
+          24 days!
+        </h2>
+        <div class="countdown-wrapper">
+          <div class="countdown-box">
+            <p class="number" id="daysCount">00</p>
+            <p class="unit">Days</p>
+          </div>
+          <div class="countdown-box">
+            <p class="number" id="hoursCount">00</p>
+            <p class="unit">Hours</p>
+          </div>
+          <div class="countdown-box">
+            <p class="number" id="minutesCount">00</p>
+            <p class="unit">Minutes</p>
+          </div>
+          <div class="countdown-box">
+            <p class="number" id="secondsCount">00</p>
+            <p class="unit">Seconds</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{ $js := resources.Get "/javascript/icodemas/codemas01.js" }}
+    <script type="module" src="{{ $js.RelPermalink }}"></script>
+  </body>
+</html>

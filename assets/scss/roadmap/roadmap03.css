@@ -1,0 +1,169 @@
+:root {
+  --color-black1: #1e1a50;
+  --color-black2: #1a2950;
+  --color-dblue: #242e4c;
+  --color-blue: #738bfd;
+  --color-orange: #f55623;
+  --color-gray1: #767e96;
+  --color-gray2: #e9eaed;
+  --color-gray3: #f3f4f6;
+
+  --font-family: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+}
+
+/* button reset */
+
+button {
+  cursor: pointer;
+
+  border-style: none;
+  background: none;
+}
+
+/* list reset */
+
+li {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  background-image: linear-gradient(-45deg, #fc354c, #0abfbc, #fc354c, #0abfbc);
+  background-size: 400%;
+  animation: bg-animation 20s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+main {
+  width: 100%;
+  margin: auto;
+}
+
+.modal {
+  width: 80%;
+  max-width: 25rem;
+
+  margin: auto;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  border-radius: 0.75rem;
+  box-shadow: 4rem 4rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.text-bdays {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.users {
+  margin-block-start: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.user__item {
+  display: flex;
+  gap: 1rem;
+}
+
+.user__icon {
+  align-self: center;
+}
+
+.user__icon img {
+  aspect-ratio: 1;
+  width: 3.125rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  align-self: top;
+}
+
+.user__name {
+  font-size: 16px;
+}
+
+.user__age {
+  font-size: 15px;
+  color: gray;
+}
+
+@media (max-width: 21.25rem) {
+  .text-bdays {
+    text-align: center;
+  }
+  .user__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user__info {
+    align-items: center;
+  }
+}
+
+.button {
+  margin-block-start: 2rem;
+
+  padding: 1.5em;
+  width: 100%;
+  border-radius: 0.5em;
+
+  align-self: center;
+
+  background-image: linear-gradient(
+    -45deg,
+    #009fff 0%,
+    #ec2f4b 35%,
+    #ec2f4b 65%,
+    #009fff 100%
+  );
+  background-size: 300%;
+  background-position: left;
+
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.25em rgba(0, 0, 0, 0.2);
+
+  font-weight: bold;
+
+  transition: 1000ms;
+}
+
+.button:hover {
+  background-position: right;
+}
